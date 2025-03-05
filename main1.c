@@ -1,18 +1,18 @@
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
-    int i=3031;
-    int a=i-1500;
-    if(a<=0){
-        printf("70元\n");
-    }else if(a<=100){
-        printf("80元\n");
-    }else{
-        int c=a/100;
-        int r=(a%100)?1:0;
-        int sum=(c+r)*10+70;
-        printf("%d元\n",sum);
+    char a[]="AABBBCCCCdd";
+    int len = strlen(a); //字串長度
+    for(int i=0;i<len;i++){
+        int count=1; //字母至少出現一次
+        while(i+1<len && a[i]==a[i+1]){
+            count++;
+            i++;
+        }
+        printf("%c%d",a[i],count);
     }
+    printf("\n");
     return 0;
 }
