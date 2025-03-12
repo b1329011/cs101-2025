@@ -1,10 +1,17 @@
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
-    for(int i=1,j=0;i<=9;){
-        printf("%d*%d=%d\t",i,j,i*++j);
-        (j==9)?(i++,j=0,printf("\n")):i;
-    }
-        return 0;
+   char str[]="Hello";
+   int left=0,right=strlen(str)-1;//字串長度-1為最右側字元
+   while(left<right){
+       char a=str[left];
+       str[left]=str[right];//先將左邊的字元站存變數後將右邊字元改到左邊
+       str[right]=a;
+       left++;
+       right--;
+   }
+   printf("%s",str);
+    return 0;
 }
