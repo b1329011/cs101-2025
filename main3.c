@@ -1,11 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
-   unsigned char i=200;
-   unsigned char j=220;
-   unsigned char k=0;
-   k=((j-i)/2)+i;
-   printf("(%d+%d)/2=%d\n",i,j,k);
+   char binary[]="10001111";
+   int decimal=strtol(binary,NULL,2);//字串改成數值
+   printf("%X",decimal);
+
     return 0;
 }
