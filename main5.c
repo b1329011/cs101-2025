@@ -1,15 +1,26 @@
 #include <stdio.h>
+void print_sp(int i,int rows){
+    for(int j=1;j<rows;j++){
+        printf(" ");
+    }
+}//倒數第幾行要打幾個空白建
+int num=1;
+void print_num(int rows){
+    for(int j=1;j<=rows;j++){
+        printf("%d ",num);
+    }
+}//第幾行要打甚麼數字
 
 int main()
 {
-    int n=7;
-    int c=0;
-    while(n){
-        if(n&1){
-            c++;
-        }
-        n>>=1;
+    int rows=6;
+    int n=rows;
+    for(int i=1;i<=n;i++){
+        print_sp(i,rows);
+        print_num(i);
+        printf("\n");
+        rows--;
+        num++;
     }
-    printf("%d\n",c);
     return 0;
 }
