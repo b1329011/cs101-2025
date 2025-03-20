@@ -2,13 +2,9 @@
 
 int main()
 {
-   int i=12345;
-   int f;
-   int l=f=i%10;
-   while (i>=10){
-       i/=10;
-       f=i%10;
-   }
-   printf("first%d+last%d=%d",f,l,f+l);
+    int* ip;
+    *ip = 2;
+    printf("%x\n", *ip);
+    
     return 0;
 }
